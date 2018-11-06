@@ -56,6 +56,7 @@ function playSample(sampleName) {
 }
 
 
+
  // user logic
 $(document).ready(function() {
 //AMELIA'S USER LOGIC
@@ -63,6 +64,9 @@ $(document).ready(function() {
     userArray.push(greenButton);
      greenPress += 1;
      playSample("green-sound");
+     $("#q2").removeAttr('style');
+     $("#q3").removeAttr('style');
+     $("#q4").removeAttr('style');
      $("#q1").css("background-image", "radial-gradient(white, #0bc455, #194c2d)");
      console.log(userArray);
      //console.log(greenPress);
@@ -71,6 +75,9 @@ $(document).ready(function() {
     userArray.push(redButton);
      redPress += 1;
      playSample("red-sound");
+     $("#q1").removeAttr('style');
+     $("#q3").removeAttr('style');
+     $("#q4").removeAttr('style');
      $("#q2").css("background-image", "radial-gradient(white, #e00808, #4c1818)");
      console.log(userArray);
      //console.log(redPress);
@@ -79,6 +86,9 @@ $(document).ready(function() {
     userArray.push(yellowButton);
      yellowPress += 1;
      playSample("yellow-sound");
+     $("#q1").removeAttr('style');
+     $("#q2").removeAttr('style');
+     $("#q4").removeAttr('style');
      $("#q3").css("background-image", "radial-gradient(white, #c0c40b, #484c19)");
      console.log(userArray);
    //console.log(yellowPress);
@@ -87,6 +97,9 @@ $(document).ready(function() {
     userArray.push(blueButton);
      bluePress += 1;
      playSample("blue-sound");
+     $("#q1").removeAttr('style');
+     $("#q2").removeAttr('style');
+     $("#q3").removeAttr('style');
      $("#q4").css("background-image", "radial-gradient(white, #0b45c4, #19224c)");
      console.log(userArray);
      //console.log(bluePress);
