@@ -15,6 +15,22 @@ function myStopFunction() {
     clearInterval(myVar);
 }
 
+///active button style
+// var newVar;
+//
+// function cssStyle() {
+//   this.css("background-image", "radial-gradient(white, grey, black)");
+// }
+//
+// function setColor() {
+//   newVar = setInterval(ccsStyle, 800);
+// }
+//
+// function clearStyle() {
+//     clearInterval(newVar);
+// }
+
+
  //AMELIA'S BIZ
 //continuous values for each button
 var redButton = 1;
@@ -57,50 +73,82 @@ function playSample(sampleName) {
 
 
 
+
+
  // user logic
 $(document).ready(function() {
 //AMELIA'S USER LOGIC
   $("#q1").click(function(){
+
+    function removeStyle() {
+      $("#q1").removeAttr('style');
+    }
+
     userArray.push(greenButton);
      greenPress += 1;
+
      playSample("green-sound");
-     $("#q2").removeAttr('style');
-     $("#q3").removeAttr('style');
-     $("#q4").removeAttr('style');
-     $("#q1").css("background-image", "radial-gradient(white, #0bc455, #194c2d)");
+     // $("#q2").removeAttr('style');
+     // $("#q3").removeAttr('style');
+     // $("#q4").removeAttr('style');
+     $(this).css("background-image", "radial-gradient(white, #0bc455, #194c2d)");
+     setInterval(removeStyle, 1000);
      console.log(userArray);
      //console.log(greenPress);
   });
+
   $("#q2").click(function(){
+
+    function removeStyle() {
+      $("#q2").removeAttr('style');
+    }
+
     userArray.push(redButton);
      redPress += 1;
+
      playSample("red-sound");
-     $("#q1").removeAttr('style');
-     $("#q3").removeAttr('style');
-     $("#q4").removeAttr('style');
+     // $("#q1").removeAttr('style');
+     // $("#q3").removeAttr('style');
+     // $("#q4").removeAttr('style');
      $("#q2").css("background-image", "radial-gradient(white, #e00808, #4c1818)");
+     setInterval(removeStyle, 1000);
      console.log(userArray);
      //console.log(redPress);
   });
+
   $("#q3").click(function(){
+
+    function removeStyle() {
+      $("#q3").removeAttr('style');
+    }
+
     userArray.push(yellowButton);
      yellowPress += 1;
+
      playSample("yellow-sound");
-     $("#q1").removeAttr('style');
-     $("#q2").removeAttr('style');
-     $("#q4").removeAttr('style');
+     // $("#q1").removeAttr('style');
+     // $("#q2").removeAttr('style');
+     // $("#q4").removeAttr('style');
      $("#q3").css("background-image", "radial-gradient(white, #c0c40b, #484c19)");
+     setInterval(removeStyle, 1000);
      console.log(userArray);
    //console.log(yellowPress);
   });
+
   $("#q4").click(function(){
+
+    function removeStyle() {
+      $("#q4").removeAttr('style');
+    }
+
     userArray.push(blueButton);
      bluePress += 1;
      playSample("blue-sound");
-     $("#q1").removeAttr('style');
-     $("#q2").removeAttr('style');
-     $("#q3").removeAttr('style');
+     // $("#q1").removeAttr('style');
+     // $("#q2").removeAttr('style');
+     // $("#q3").removeAttr('style');
      $("#q4").css("background-image", "radial-gradient(white, #0b45c4, #19224c)");
+     setInterval(removeStyle, 1000);
      console.log(userArray);
      //console.log(bluePress);
   });
