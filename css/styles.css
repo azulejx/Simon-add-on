@@ -125,9 +125,10 @@ body {
 }
 
 .red-button-active {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  background-image: radial-gradient(white, #e00808, #4c1818);
+  outline: 4px solid #303030;
+  border: 12px solid #303030;
+  border-radius: 24%;
 }
 
 .blue-button {

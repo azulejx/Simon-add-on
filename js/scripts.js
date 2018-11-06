@@ -55,48 +55,43 @@ function playSample(sampleName) {
     }
 }
 
-$(document).ready(function() {
-  $("#q1").click(function() {
-    playSample("green-sound");
-  });
-  $("#q2").click(function() {
-    playSample("red-sound");
-  });
-  $("#q3").click(function() {
-    playSample("yellow-sound");
-  });
-  $("#q4").click(function() {
-    playSample("blue-sound");
-  });
-});
 
  // user logic
 $(document).ready(function() {
 //AMELIA'S USER LOGIC
-  $("#red").click(function(){
-    userArray.push(redButton);
-     redPress += 1;
-     console.log(userArray);
-     //console.log(redPress);
-  });
-  $("#blue").click(function(){
-    userArray.push(blueButton);
-     bluePress += 1;
-     console.log(userArray);
-     //console.log(bluePress);
-  });
-  $("#green").click(function(){
+  $("#q1").click(function(){
     userArray.push(greenButton);
      greenPress += 1;
+     playSample("green-sound");
+     $("#q1").css("background-image", "radial-gradient(white, #0bc455, #194c2d)");
      console.log(userArray);
      //console.log(greenPress);
   });
-  $("#yellow").click(function(){
+  $("#q2").click(function(){
+    userArray.push(redButton);
+     redPress += 1;
+     playSample("red-sound");
+     $("#q2").css("background-image", "radial-gradient(white, #e00808, #4c1818)");
+     console.log(userArray);
+     //console.log(redPress);
+  });
+  $("#q3").click(function(){
     userArray.push(yellowButton);
      yellowPress += 1;
+     playSample("yellow-sound");
+     $("#q3").css("background-image", "radial-gradient(white, #c0c40b, #484c19)");
      console.log(userArray);
    //console.log(yellowPress);
   });
+  $("#q4").click(function(){
+    userArray.push(blueButton);
+     bluePress += 1;
+     playSample("blue-sound");
+     $("#q4").css("background-image", "radial-gradient(white, #0b45c4, #19224c)");
+     console.log(userArray);
+     //console.log(bluePress);
+  });
+
  //RICHARD'S USER LOGIC
   $("#test-button").click(function(event) {
     event.preventDefault();
